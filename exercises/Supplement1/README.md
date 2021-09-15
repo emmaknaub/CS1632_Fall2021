@@ -357,6 +357,7 @@ ASAN can help us this time as well:
 
 ```
 $ ./stack_pointer_return.asan
+[Sent data]
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
 ==2438240==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x561accf992c7 bp 0x7ffc3c7d7630 sp 0x7ffc3c7d7610 T0)
@@ -408,7 +409,8 @@ $ ./stack_overflow.asan
 ```
 
 ```
-$ ./stack_pointer_return.asan 
+$ ./stack_pointer_return.asan
+[Sent data]
  1  2  3  4  5  6  7  8 
 ```
 
