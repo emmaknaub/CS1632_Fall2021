@@ -91,14 +91,21 @@ if you know your way around Linux.  Your AFS home directory is mounted at
 
 The first action item is to copy over the exercise source code to your local
 directory.  Create and go to a directory of your choice (or you can stay at
-your default home directory) and do the following:
+your default home directory) and the clone your GitHub Classroom repository:
 
 ```
-$ cp -R /home/PITT/wahn/nondeterminism ./
-$ cd nondeterminism/C
+$ git clone <your GitHub Classroom repository HTTPS URL>
 ```
 
-I have provided a Makefile build script to automate the build.  All you have to do is invoke 'make':
+This will ask for your Username and Password.  Username is your GitHub
+account username, but Password is not your password.  Password
+authentication on GitHub has been deprecated on August 2021, so now you have
+to use something called a Personal Authenication Token (PAT) in place of the
+password.  Here are instructions on how to create a PAT:
+https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+Now cd into your cloned directory.  I have provided a Makefile build script
+to automate the build.  All you have to do is invoke 'make':
 
 ```
 $ make
@@ -545,8 +552,49 @@ https://www.geeksforgeeks.org/mutex-lock-for-linux-thread-synchronization/
 
 ## Submission
 
-Please submit your GitHub Classroom repository with the debugged
-stack_overflow.c, stack_pointer_return.c, and datarace.c to GradeScope to
+Once you got it working, it's time to commit your changes and push them to
+the GitHub.com origin repository.  Before you do that, let's clean up the
+repository such that you remove all generated binary files:
+
+```
+$ make clean
+```
+
+Once you do that, if you do 'git status' you should see only three modified
+files:
+
+```
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   datarace.c
+	modified:   stack_overflow.c
+	modified:   stack_pointer_return.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Now, let's commit those files to your local repository (after adding the
+modifications using the -a option):
+
+```
+$ git commit -a
+```
+
+That will launch an editor where you can add comments.  After saving the
+comments, you will see the commit happening.  Now the only thing left to do
+is to push the changes to the origin:
+
+```
+$ git push
+```
+
+Feel free to double check that your changes have to been reflected on to
+your GitHub Classroom origin repository.  Please submit that repository to
 the "Supplementary Exercise 1 GitHub" link.
 
 Again, don't forget to add your partner to each submission.  You can
@@ -555,8 +603,8 @@ autograder.
 
 ## Division of Work
 
-For this exercise, I recommend that you both try to the full exercise.
-Compare your debugged files in the end and submit!
+For this exercise, I recommend that you both try to do the full exercise.
+Compare your debugged files in the end, discuss, and submit!
 
 ## Resources
 
