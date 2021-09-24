@@ -19,13 +19,17 @@ The exam will consist of these types of questions:
   * Multiple choice questions
   * Fill in the blank questions
   * Short answer questions (explain a concept, discuss pros/cons, etc.)
-  * JUnit / Gherkin / Cucumber code tracing questions
+  * JUnit / Gherkin / Cucumber / Sanitizer code tracing questions
   * JUnit / Gherkin / Cucumber coding questions
 
 If you want more JUnit or Cucumber coding practice, look inside the
 [midterm_1_practice](midterm_1_practice) folder for more examples.
 
 Here are the key topics to study in preparation for the test.
+
+**Note: the items in italic are learning goals that require application of your
+knowledge.  Either you have to apply your knowledge to a piece of code, or you
+need to apply a testing tool to a specific problem.**
 
 ## TESTING THEORY AND TERMINOLOGY
 * Be able to explain why exhaustive testing is virtually impossible, even with just one method.
@@ -35,6 +39,20 @@ Here are the key topics to study in preparation for the test.
 * Be able to explain the difference between static vs dynamic testing and give examples of each.
 * Be able to explain the difference between black box / white box / gray box testing and give examples of each.
 * Be able to define all terminology introduced or fill in the blank.
+
+## NONDETERMINISM AND SOFTWARE QA
+* Be able to explain what nondeterministic software is.
+* Be able to explain why nondeterminism makes it hard to do requirements
+  verification, even for one input.
+* Be able to explain why nondeterminism makes it hard to debug defects.
+* Be able to describe the process through which memory errors can lead to
+  nondeterministic software.
+* Be able to define what a data race (race condition) is and explain why it
+  can lead to nondeterministic software.
+* **Be able to use ASAN to locate a memory error (buffer overflow or
+  dangling pointer) in the provided code and explain why it is an error.**
+* **Be able to use TSAN to locate a data race error in the provided code and
+  explain why it is an error.**
 
 ## REQUIREMENTS ANALYSIS
 * Be able to argue why requirements should not specify implementation.
@@ -50,11 +68,12 @@ Here are the key topics to study in preparation for the test.
 * Be able to explain what problems in a test case may cause it to become not reproducible.
 * Be able to explain what problems in a test case cause it to not be independent.
 * Be able to explain the hierarchy of test cases, test plans, test suites.
-* Be able to write a traceability matrix given requirements and test cases
-  * Be able to tell problems with a test plan based on the traceability matrix
-* Be able to critique an example test case on what problems it may have.
-  * Problems with preciseness, reproducibility, independence.
 * Be able to define all terminology introduced or fill in the blank.
+* **Be able to critique an example test case on what problems it has.**
+  * Problems with preciseness, reproducibility, independence.
+* **Be able to tell problems with a test plan based on the traceability matrix.**
+* **Be able to write a traceability matrix given requirements and test
+  cases.**
 
 ## DEFECT REPORTING
 * Be able to explain the difference between a defect and a candidate for enhancement.
@@ -63,12 +82,12 @@ Here are the key topics to study in preparation for the test.
 * Be able to explain why sometimes software is released with known bugs inside them.
 * Be able to explain why bad coding style is not a defect.
 * Be able to explain what triage and sub-triage are.
-* Be able to critique an example defect report on what problems it may have.
-  * Problems with preciseness and reproducibility.
 * Be able to define all terminology introduced or fill in the blank.
+* **Be able to critique an example defect report on what problems it may have.**
+  * Problems with preciseness and reproducibility.
 
 ## BREAKING SOFTWARE
-* Given buggy code, be able to recognize what the problem is and be able to categorize it.
+* **Given buggy code, be able to recognize what the problem is and be able to categorize it.**
   * Logic errors
   * Null pointer errors
   * Floating point / Rounding errors
@@ -86,12 +105,12 @@ Here are the key topics to study in preparation for the test.
 
 ## UNIT TESTING
 * Be able to list the 4 levels of testing in a hierarchy: acceptance/system/integration/unit.
-* Be prepared to write some unit tests in JUnit.
-  * Names of JUnit methods will be provided, but you should know _how_ to use them.
-* Be prepared to write JUnit code for stubs, test doubles, mocks, and behavior verification.
+* **Be able to write unit tests in JUnit given a test case.**
+* **Be able to write JUnit code to create stubs, test doubles, mocks,**
+* **Be able to write JUnit code to perform both state verification and behavior verification.**
 * Testing private methods
-  * You will NOT be asked to write code to test them using reflection.
-  * You may be asked to discuss why/why not one might not decide to test them.
+  * Be able to discuss why/why not one might not decide to test them.
+  * **Be able to write code to test a private method using Java reflection.**
 
 ## TDD
 * Be able to draw the red-green-refactor loop.
@@ -112,7 +131,8 @@ Here are the key topics to study in preparation for the test.
   * Hard to change requirements mid-development due to tests breaking
 * Be able to discuss drawbacks of BDD.
   * Drawbacks of specification by example
-* Be able to take Gherkin and Cucumber code and trace through it and explain the end result.
+* **Be able to take Gherkin and Cucumber code and trace through it and explain the end result.**
+* **Be able to write Gherkin and Cucumber code given a test scenario, with reuse of Cucumber steps.**
 
 ## WRITING TESTABLE CODE
 * Be able to explain basic strategies for testable code.
@@ -123,7 +143,7 @@ Here are the key topics to study in preparation for the test.
   * Make it easy to satisfy preconditions
   * Make it easy to reproduce
   * Make it easy to localize
-* Be able to perform dependency injection for localization or reproducibility (See TopHat questions).
 * Be able to describe two strategies for dealing with legacy code.
   * Pinning tests
   * Seams
+* **Be able to perform dependency injection for localization or reproducibility**.
