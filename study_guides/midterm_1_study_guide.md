@@ -13,10 +13,7 @@ recommend you review the slides and the textbook (See syllabus.md for which
 chapters are required reading.  The reading is also on the last slide of each
 lecture).  Going over the TopHat questions will be quite helpful too.  You are
 also expected to have completed Exercises 1 and 2, and Supplementary Exercises
-1 and 2, and be able to answer related questions.  The ongoing lecture on
-Nondeterminism and Software QA is not going to be on the exam as it requires
-knowledge of C programming to fully understand and CS 449 Systems Software is
-not (yet) a prerequisite for this course.
+1 and 2, and be able to answer related questions.  
 
 The exam will consist of these types of questions:
   * Multiple choice questions
