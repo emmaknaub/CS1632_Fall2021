@@ -11,6 +11,7 @@
     + [Further Modifying StepDefinitions.java and User Story for the "return cats" Feature](#further-modifying-stepdefinitionsjava-and-user-story-for-the--return-cats--feature)
   * [Submission](#submission)
     + [GradeScope Feedback](#gradescope-feedback)
+  * [Groupwork Plan](#groupwork-plan)
   * [Resources](#resources)
 
 # CS 1632 - Software Quality Assurance
@@ -266,6 +267,12 @@ Tests run: 14, Failures: 9, Errors: 1, Skipped: 0
 ```
 
 There were 9 failures and 1 errors so the final score is: 14 - 9 - 1 = 4.
+
+## Groupwork Plan
+
+For this exercise, I recommend that you both try to do the full exercise to get
+the full range of experience with Gherkin and Cucumber.  Compare your solutions
+in the end, discuss, and submit!
 
 ## Resources
 
