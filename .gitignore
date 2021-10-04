@@ -8,3 +8,5 @@
 *.class
 *.txt~
 *.java~
+*.c~
+exercises/2/.DS_Store
